@@ -1,10 +1,10 @@
 # Academy
 
-## This API was made with JAVA SPRING BOOT.
+This Java Spring Boot API, named "Academy," is designed to manage information about teachers, students, and training programs.
 
 ## Diagram
 
-<img style="width: 1000px; height: 500px;" src=".github/public/db_diagram.svg">
+<img src=".github/public/db_diagram.svg">
 
 ## Business rule
    <p>The application manages information about teachers, students and training, with the following business rules:</p>
@@ -33,3 +33,10 @@
 
 - **Relationship between Filters and Records:**
   - The filters (`StudentFilter` and `TrainingFilter`) are directly related to the corresponding records (students and training) through the foreign keys `student_id` and `training_id`, respectively.
+
+##  Contributing
+<p>Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.</p>
+
+## LICENSE
+
+<p>Academy is <a href="https://github.com/Jorelwall451/academy-api/blob/main/LICENSE">MIT LICENSE</a></p>
