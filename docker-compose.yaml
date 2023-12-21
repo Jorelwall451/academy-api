@@ -1,0 +1,5 @@
+services:
+  academy:
+    image: academy
+    env_file:
+      - .env
