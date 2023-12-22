@@ -1,4 +1,4 @@
-package main.java.academy.api;
+package academy.api;
 
 public class Teacher {
     

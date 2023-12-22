@@ -1,0 +1,28 @@
+
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.8.0'
+    implementation 'com.google.guava:guava:30.1-jre'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'academy.api.App'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
