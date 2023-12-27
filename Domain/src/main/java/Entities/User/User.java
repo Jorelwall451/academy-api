@@ -1,13 +1,16 @@
 package Entities.User;
 
+import Entities.Transaction.Transaction;
 import ValueObjects.Cpf;
 import ValueObjects.Email;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 public class User {
     private final UUID id;
+
     private String name;
     private String description;
     private String password;
@@ -16,6 +19,7 @@ public class User {
     private Email email;
     private Cpf cpf;
     private String pixKey;
+    private List<Transaction> transactions;
     private LocalDateTime birthdate;
     private LocalDateTime loginAt;
     private LocalDateTime createdAt;
@@ -91,6 +95,14 @@ public class User {
 
     public void setPixKey(String pixKey) {
         this.pixKey = pixKey;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
     }
 
     public LocalDateTime getBirthdate() {
