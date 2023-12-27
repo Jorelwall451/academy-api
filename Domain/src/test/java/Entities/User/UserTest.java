@@ -1,5 +1,6 @@
 package Entities.User;
 
+import Exceptions.ValidatorException;
 import ValueObjects.Email;
 import ValueObjects.Cpf;
 import ValueObjects.PixKey;
@@ -55,21 +56,21 @@ public final class UserTest {
     }
 
     @Test
-    public void testGetSetEmail() {
-        Email testEmail = new Email("john.doe@example.com");
+    public void testGetSetEmail() throws ValidatorException {
+        Email testEmail = new Email("david@example.com");
         user.setEmail(testEmail);
         Assertions.assertEquals(testEmail, user.getEmail());
     }
 
     @Test
-    public void testGetSetCpf(){
+    public void testGetSetCpf() throws ValidatorException {
         Cpf testCpf = new Cpf("1234567890");
         user.setCpf(testCpf);
         Assertions.assertEquals(testCpf, user.getCpf());
     }
 
     @Test
-    public void testGetSetPixKey() {
+    public void testGetSetPixKey() throws ValidatorException {
         PixKey testPixKey = new PixKey("123456789");
         user.setPixKey(testPixKey);
         Assertions.assertEquals(testPixKey, user.getPixKey());
