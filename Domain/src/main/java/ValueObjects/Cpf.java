@@ -2,22 +2,39 @@ package ValueObjects;
 
 import Exceptions.ValidatorException;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public final class Cpf {
     public Cpf(String cpf) throws ValidatorException {
         this.validate(cpf);
     }
 
     private void validate(String cpf) throws ValidatorException {
-        String CpfPattern = "^(?!000\\.000\\.000-00)(\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2})$";
-        Pattern pattern = Pattern.compile(CpfPattern);
+        if(cpf.length() != 11){
+            throw new ValidatorException("The email " + cpf + " is invalid");
+        }
 
-        Matcher matcher = pattern.matcher(cpf);
+        int[] numbers = new int[11];
+        for (int i = 0; i < 11; i++) {
+            numbers[i] = Integer.parseInt(cpf.substring(i, i + 1));
+        }
 
-        if(!matcher.matches()){
-            throw new ValidatorException("Cpf " + cpf + "is invalid!");
+        int sum = 0;
+        for (int i = 0; i < 9; i++) {
+            sum += numbers[i] * (10 - i);
+        }
+
+        int digit1 = 11 - (sum % 11);
+        digit1 = (digit1 >= 10) ? 0 : digit1;
+
+        sum = 0;
+        for (int i = 0; i < 10; i++) {
+            sum += numbers[i] * (11 - i);
+        }
+
+        int digit2 = 11 - (sum % 11);
+        digit2 = (digit2 >= 10) ? 0 : digit2;
+
+        if (digit1 != numbers[9] || digit2 != numbers[10]) {
+            throw new ValidatorException("The email " + cpf + " is invalid");
         }
     }
 }
