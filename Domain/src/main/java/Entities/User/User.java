@@ -1,6 +1,7 @@
 package Entities.User;
 
 import Entities.Transaction.Transaction;
+import Exceptions.NotFoundException;
 import ValueObjects.Cpf;
 import ValueObjects.Email;
 
@@ -11,7 +12,6 @@ import java.util.UUID;
 
 public class User {
     private final UUID id;
-
     private String name;
     private String description;
     private String password;
@@ -104,6 +104,13 @@ public class User {
 
     public void setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
+    }
+
+    public Transaction getTransaction(UUID transactionId) throws NotFoundException {
+        return transactions.stream()
+                .filter(transaction -> transaction.getId() == transactionId)
+                .findFirst()
+                .orElseThrow(() -> new NotFoundException("Transaction not found with id " + transactionId));
     }
 
     public void setTransaction(Transaction transaction){
