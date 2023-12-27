@@ -5,6 +5,7 @@ import ValueObjects.Cpf;
 import ValueObjects.Email;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -19,7 +20,7 @@ public class User {
     private Email email;
     private Cpf cpf;
     private String pixKey;
-    private List<Transaction> transactions;
+    private List<Transaction> transactions = new ArrayList<>();
     private LocalDateTime birthdate;
     private LocalDateTime loginAt;
     private LocalDateTime createdAt;

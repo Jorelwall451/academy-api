@@ -1,5 +1,6 @@
 package Entities.User;
 
+import Entities.Transaction.Transaction;
 import Exceptions.ValidatorException;
 import ValueObjects.Email;
 import ValueObjects.Cpf;
@@ -8,6 +9,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public final class UserTest {
@@ -73,6 +76,30 @@ public final class UserTest {
         String testPixKey = "123456789";
         user.setPixKey(testPixKey);
         Assertions.assertEquals(testPixKey, user.getPixKey());
+    }
+
+    @Test
+    public void testGetSetTransactions(){
+        List<Transaction> testTransactions = new ArrayList<>();
+
+        for(int transactionIndex = 0; transactionIndex < 10; transactionIndex++){
+            Transaction newTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID());
+            testTransactions.add(newTransaction);
+        }
+
+        user.setTransactions(testTransactions);
+
+        for(int transactionIndex = 0; transactionIndex < 10; transactionIndex++){
+            Assertions.assertEquals(testTransactions.get(transactionIndex), user.getTransactions().get(transactionIndex));
+        }
+    }
+
+    @Test
+    public void testGetSetTransaction(){
+        Transaction testTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID());
+
+        user.setTransaction(testTransaction);
+        Assertions.assertTrue(user.getTransactions().contains(testTransaction));
     }
 
     @Test
