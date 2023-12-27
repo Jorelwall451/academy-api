@@ -105,6 +105,10 @@ public class User {
         this.transactions = transactions;
     }
 
+    public void setTransaction(Transaction transaction){
+        this.transactions.add(transaction);
+    }
+
     public LocalDateTime getBirthdate() {
         return birthdate;
     }
