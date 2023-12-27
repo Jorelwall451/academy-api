@@ -45,7 +45,7 @@ public final class UserTest {
 
     @Test
     public void testGetSetPhotoUrl(){
-        String testPhotoUrl = "https://www.academy.com/user/csd9gs/photo.jpeg";
+        String testPhotoUrl = "https://www.academy.com/user/ec9f424e-7620-453e-b512-5cc25ef26241/photo.jpeg";
         user.setPhotoUrl(testPhotoUrl);
         Assertions.assertEquals(testPhotoUrl, user.getPhotoUrl());
     }
@@ -83,7 +83,7 @@ public final class UserTest {
         List<Transaction> testTransactions = new ArrayList<>();
 
         for(int transactionIndex = 0; transactionIndex < 10; transactionIndex++){
-            Transaction newTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID());
+            Transaction newTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID(), UUID.randomUUID());
             testTransactions.add(newTransaction);
         }
 
@@ -96,7 +96,7 @@ public final class UserTest {
 
     @Test
     public void testGetSetTransaction(){
-        Transaction testTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID());
+        Transaction testTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID(), UUID.randomUUID());
 
         user.setTransaction(testTransaction);
         Assertions.assertTrue(user.getTransactions().contains(testTransaction));
