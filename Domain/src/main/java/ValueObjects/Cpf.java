@@ -9,7 +9,7 @@ public final class Cpf {
 
     private void validate(String cpf) throws ValidatorException {
         if(cpf.length() != 11){
-            throw new ValidatorException("The email " + cpf + " is invalid");
+            throw new ValidatorException("The cpf " + cpf + " is invalid");
         }
 
         int[] numbers = new int[11];

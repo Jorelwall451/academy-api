@@ -3,7 +3,6 @@ package Entities.User;
 import Exceptions.ValidatorException;
 import ValueObjects.Email;
 import ValueObjects.Cpf;
-import ValueObjects.PixKey;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -64,14 +63,14 @@ public final class UserTest {
 
     @Test
     public void testGetSetCpf() throws ValidatorException {
-        Cpf testCpf = new Cpf("1234567890");
+        Cpf testCpf = new Cpf("12345678909");
         user.setCpf(testCpf);
         Assertions.assertEquals(testCpf, user.getCpf());
     }
 
     @Test
-    public void testGetSetPixKey() throws ValidatorException {
-        PixKey testPixKey = new PixKey("123456789");
+    public void testGetSetPixKey() {
+        String testPixKey = "123456789";
         user.setPixKey(testPixKey);
         Assertions.assertEquals(testPixKey, user.getPixKey());
     }

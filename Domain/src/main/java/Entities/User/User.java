@@ -2,7 +2,6 @@ package Entities.User;
 
 import ValueObjects.Cpf;
 import ValueObjects.Email;
-import ValueObjects.PixKey;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -16,7 +15,7 @@ public class User {
     private Integer age;
     private Email email;
     private Cpf cpf;
-    private PixKey pixKey;
+    private String pixKey;
     private LocalDateTime birthdate;
     private LocalDateTime loginAt;
     private LocalDateTime createdAt;
@@ -86,11 +85,11 @@ public class User {
         this.cpf = cpf;
     }
 
-    public PixKey getPixKey() {
+    public String getPixKey() {
         return pixKey;
     }
 
-    public void setPixKey(PixKey pixKey) {
+    public void setPixKey(String pixKey) {
         this.pixKey = pixKey;
     }
 
