@@ -6,13 +6,14 @@ import java.util.UUID;
 public final class Transaction {
     private final UUID id;
     private final UUID fromUserId;
-    private UUID toUserId;
+    private final UUID toUserId;
     private Float amount;
     private LocalDateTime createdAt;
 
-    public Transaction(UUID id, UUID fromUserId) {
+    public Transaction(UUID id, UUID fromUserId, UUID toUserId) {
         this.id = id;
         this.fromUserId = fromUserId;
+        this.toUserId = toUserId;
     }
 
     public UUID getId() {
@@ -25,10 +26,6 @@ public final class Transaction {
 
     public UUID getToUserId() {
         return toUserId;
-    }
-
-    public void setToUserId(UUID toUserId) {
-        this.toUserId = toUserId;
     }
 
     public float getAmount() {

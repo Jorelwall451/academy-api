@@ -7,7 +7,6 @@ public final class Assessment {
     private final UUID id;
     private final UUID teacherId;
     private final UUID studentId;
-
     private String description;
     private Integer rating;
     private LocalDateTime createdAt;

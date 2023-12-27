@@ -3,12 +3,13 @@ package Entities.TrainingSection;
 import Entities.Training.Training;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public final class TrainingSection {
     private final UUID id;
-    private List<Training> trainings;
+    private List<Training> trainings = new ArrayList<>();
     private String name;
     private String description;
     private LocalDateTime createdAt;
