@@ -6,18 +6,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class PixKey {
-    public PixKey(String pixKey){
+    public PixKey(String pixKey) throws ValidatorException {
         this.validate(pixKey);
     }
 
-    public void validate(String pixKey){
+    private void validate(String pixKey) throws ValidatorException {
         String pixKeyPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
         Pattern pattern = Pattern.compile(pixKeyPattern);
 
         Matcher matcher = pattern.matcher(pixKey);
 
         if(!matcher.matches()){
-            new ValidatorException().setMessage("Pix key " + pixKey + "is invalid!");
+            throw new ValidatorException("Pix key " + pixKey + "is invalid!");
         }
     }
 }
