@@ -1,6 +1,7 @@
 package Entities.User;
 
 import Entities.Transaction.Transaction;
+import Exceptions.NotFoundException;
 import Exceptions.ValidatorException;
 import ValueObjects.Email;
 import ValueObjects.Cpf;
@@ -45,7 +46,7 @@ public final class UserTest {
 
     @Test
     public void testGetSetPhotoUrl(){
-        String testPhotoUrl = "https://www.academy.com/user/ec9f424e-7620-453e-b512-5cc25ef26241/photo.jpeg";
+        String testPhotoUrl = "https://www.academy.com/user/csd9gs/photo.jpeg";
         user.setPhotoUrl(testPhotoUrl);
         Assertions.assertEquals(testPhotoUrl, user.getPhotoUrl());
     }
@@ -95,12 +96,22 @@ public final class UserTest {
     }
 
     @Test
-    public void testGetSetTransaction(){
-        Transaction testTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID(), UUID.randomUUID());
+    public void testGetSetTransaction() {
+        UUID transactionId = UUID.randomUUID();
+        Transaction testTransaction = new Transaction(transactionId, UUID.randomUUID(), UUID.randomUUID());
 
         user.setTransaction(testTransaction);
-        Assertions.assertTrue(user.getTransactions().contains(testTransaction));
+
+        Transaction retrievedTransaction = null;
+        try {
+            retrievedTransaction = user.getTransaction(transactionId);
+        } catch (NotFoundException e) {
+            Assertions.fail("Cannot found transaction with id " + transactionId);
+        }
+
+        Assertions.assertEquals(testTransaction, retrievedTransaction, "The transaction sent isn't the expected.");
     }
+
 
     @Test
     public void testGetSetBirthdate() {
