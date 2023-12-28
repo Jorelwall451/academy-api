@@ -2,15 +2,20 @@ package Entities.Student;
 
 import Entities.Assessment.Assessment;
 import Entities.Plan.Plan;
+import Entities.User.User;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public final class Student {
+public final class Student extends User {
     private UUID teacherId;
     private List<Assessment> assessments = new ArrayList<>();
     private List<Plan> plans = new ArrayList<>();
+
+    public Student(UUID id) {
+        super(id);
+    }
 
     public UUID getTeacherId() {
         return teacherId;

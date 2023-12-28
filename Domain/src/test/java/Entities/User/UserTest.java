@@ -84,8 +84,8 @@ public final class UserTest {
         List<Transaction> testTransactions = new ArrayList<>();
 
         for(int transactionIndex = 0; transactionIndex < 10; transactionIndex++){
-            Transaction newTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID(), UUID.randomUUID());
-            testTransactions.add(newTransaction);
+            Transaction newTestTransaction = new Transaction(UUID.randomUUID(), UUID.randomUUID(), UUID.randomUUID());
+            testTransactions.add(newTestTransaction);
         }
 
         user.setTransactions(testTransactions);
