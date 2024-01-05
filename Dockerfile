@@ -1,16 +1,9 @@
-FROM openjdk:17-alpine
-LABEL authors="jorelwall451"
+FROM maven:3.6.3-openjdk-17
 
-WORKDIR /app
+WORKDIR /academy-api
 
 COPY pom.xml .
-
-RUN mvn dependency:go-offline
-
 COPY Domain ./Domain
 
+RUN mvn clean install package
 RUN mvn package
-
-CMD ["java", "-jar", "target/app.jar"]
-
-ENTRYPOINT ["top", "-b"]
