@@ -1,6 +1,16 @@
 package com.academy.Usecases.User.CreateUser;
 
-public record OutputBoundary(
+import java.time.LocalDateTime;
 
+public record OutputBoundary(
+        String name,
+        String description,
+        String password,
+        Integer age,
+        String email,
+        String cpf,
+        String pixKey,
+        LocalDateTime birthdate,
+        LocalDateTime createdAt
 ) {
 }
