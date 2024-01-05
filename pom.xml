@@ -16,7 +16,8 @@
     </properties>
 
     <modules>
-
         <module>Domain</module>
+        <module>Application</module>
+        <module>Infrastructure</module>
     </modules>
 </project>
