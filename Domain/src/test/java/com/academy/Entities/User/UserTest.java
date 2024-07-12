@@ -1,11 +1,11 @@
 package com.academy.Entities.User;
 
-import com.academy.Entities.Transaction.Transaction;
-import com.academy.Entities.User.User;
-import com.academy.Exceptions.NotFoundException;
-import com.academy.Exceptions.ValidatorException;
-import com.academy.ValueObjects.Email;
-import com.academy.ValueObjects.Cpf;
+import Entities.Transaction;
+import Entities.User;
+import Exceptions.NotFoundException;
+import Exceptions.ValidatorException;
+import ValueObjects.Email;
+import ValueObjects.Cpf;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
