@@ -1,8 +1,8 @@
 package com.academy.Entities.Teacher;
 
-import com.academy.Entities.Assessment.Assessment;
-import com.academy.Entities.Student.Student;
-import com.academy.Entities.Teacher.Teacher;
+import Entities.Assessment;
+import Entities.Student;
+import Entities.Teacher;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
