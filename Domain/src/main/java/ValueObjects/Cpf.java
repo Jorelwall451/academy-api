@@ -1,6 +1,6 @@
-package com.academy.ValueObjects;
+package ValueObjects;
 
-import com.academy.Exceptions.ValidatorException;
+import Exceptions.ValidatorException;
 
 public final class Cpf {
     public Cpf(String cpf) throws ValidatorException {

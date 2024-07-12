@@ -1,6 +1,6 @@
-package com.academy.ValueObjects;
+package ValueObjects;
 
-import com.academy.Exceptions.ValidatorException;
+import Exceptions.ValidatorException;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
