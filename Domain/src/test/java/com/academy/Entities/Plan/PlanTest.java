@@ -1,6 +1,6 @@
 package com.academy.Entities.Plan;
 
-import com.academy.Entities.Plan.Plan;
+import Entities.Plan;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
