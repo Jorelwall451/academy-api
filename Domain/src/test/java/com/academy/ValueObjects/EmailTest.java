@@ -1,6 +1,6 @@
 package com.academy.ValueObjects;
 
-import com.academy.ValueObjects.Email;
+import ValueObjects.Email;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
