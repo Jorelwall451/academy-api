@@ -1,7 +1,7 @@
 package com.academy.ValueObjects;
 
 
-import com.academy.ValueObjects.Cpf;
+import ValueObjects.Cpf;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
