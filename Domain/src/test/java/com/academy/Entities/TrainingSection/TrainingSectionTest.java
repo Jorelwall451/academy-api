@@ -1,6 +1,6 @@
 package com.academy.Entities.TrainingSection;
 
-import com.academy.Entities.TrainingSection.TrainingSection;
+import Entities.TrainingSection;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
