@@ -1,8 +1,8 @@
-package com.academy.Repositories;
+package Repositories;
 
-import com.academy.Entities.User.User;
-import com.academy.ValueObjects.Cpf;
-import com.academy.ValueObjects.Email;
+import Entities.User;
+import ValueObjects.Cpf;
+import ValueObjects.Email;
 
 import java.util.Optional;
 
