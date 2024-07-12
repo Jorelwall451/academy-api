@@ -1,8 +1,7 @@
-package com.academy.Exceptions;
+package Exceptions;
 
-public final class ValidatorException extends DomainException {
-
-    public ValidatorException(String message) {
+public class NotFoundException extends DomainException {
+    public NotFoundException(String message) {
         super(message);
     }
 

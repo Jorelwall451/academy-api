@@ -1,4 +1,4 @@
-package com.academy.Usecases.User.CreateUser;
+package UseCases.User.CreateUser;
 
 import java.time.LocalDateTime;
 

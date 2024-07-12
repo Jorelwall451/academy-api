@@ -1,4 +1,4 @@
-package com.academy.Exceptions;
+package Exceptions;
 
 public abstract class DomainException extends Exception {
     public DomainException(String message) {

@@ -1,4 +1,4 @@
-package com.academy.Shared;
+package Shared;
 
 public interface Usecase<In, Out> {
     Out handle(In in);
