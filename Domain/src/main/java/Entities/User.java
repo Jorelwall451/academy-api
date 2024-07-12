@@ -1,9 +1,8 @@
-package com.academy.Entities.User;
+package Entities;
 
-import com.academy.Entities.Transaction.Transaction;
-import com.academy.Exceptions.NotFoundException;
-import com.academy.ValueObjects.Cpf;
-import com.academy.ValueObjects.Email;
+import Exceptions.NotFoundException;
+import ValueObjects.Cpf;
+import ValueObjects.Email;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

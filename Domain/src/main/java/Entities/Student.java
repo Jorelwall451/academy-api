@@ -1,8 +1,4 @@
-package com.academy.Entities.Student;
-
-import com.academy.Entities.Assessment.Assessment;
-import com.academy.Entities.Plan.Plan;
-import com.academy.Entities.User.User;
+package Entities;
 
 import java.util.ArrayList;
 import java.util.List;

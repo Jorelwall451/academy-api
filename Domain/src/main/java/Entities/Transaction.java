@@ -1,4 +1,4 @@
-package com.academy.Entities.Transaction;
+package Entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
