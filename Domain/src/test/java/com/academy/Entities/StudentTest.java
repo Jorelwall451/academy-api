@@ -1,4 +1,4 @@
-package com.academy.Entities.Student;
+package com.academy.Entities;
 
 import Entities.Assessment;
 import Entities.Student;

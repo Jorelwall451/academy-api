@@ -1,4 +1,4 @@
-package com.academy.Entities.Transaction;
+package com.academy.Entities;
 
 import Entities.Transaction;
 import Entities.User;

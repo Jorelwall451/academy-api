@@ -1,4 +1,4 @@
-package com.academy.Entities.Plan;
+package com.academy.Entities;
 
 import Entities.Plan;
 import org.junit.jupiter.api.Assertions;

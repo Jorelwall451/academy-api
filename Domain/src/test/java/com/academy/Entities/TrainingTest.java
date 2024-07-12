@@ -1,4 +1,4 @@
-package com.academy.Entities.Training;
+package com.academy.Entities;
 
 import Entities.Training;
 import org.junit.jupiter.api.Assertions;
