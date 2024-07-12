@@ -1,6 +1,6 @@
 package com.academy.ValueObjects;
 
-import com.academy.ValueObjects.PhoneNumber;
+import ValueObjects.PhoneNumber;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
