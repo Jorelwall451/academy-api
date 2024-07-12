@@ -1,7 +1,7 @@
 package com.academy.Entities.Transaction;
 
-import com.academy.Entities.Transaction.Transaction;
-import com.academy.Entities.User.User;
+import Entities.Transaction;
+import Entities.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
